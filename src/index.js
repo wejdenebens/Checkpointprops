@@ -4,9 +4,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
+      const products = [
+      {
+          category: 'Electronics',
+          price: '100',
+          name:'Phone'
+      },
+
+      {
+           category: "Clothes",
+           price: '200',
+           name:'Dress'
+      }
+  ]
   </React.StrictMode>,
   document.getElementById('root')
 );
