@@ -29,7 +29,7 @@ import PropTypes from 'prop-types';
  }
 
             ProductTable.propTypes = {
-        
+                        produit:PropTypes.object
                                      }
 
 export default ProductTable;
