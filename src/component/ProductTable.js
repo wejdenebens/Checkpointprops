@@ -1,35 +1,35 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-const ProductTable = (props) =>{
+      const ProductTable = ({produit}) => {
 
-   
-ReactDOM.render(
-  <React.StrictMode>
+        const listProducts = produit.map((product) =>{
+            return(
+                <tr>
+                    <td>{product.category}</td>
+                    <td>{product.price}</td>
+                    <td>{product.name}</td>
+
+                </tr>
+            )
+        }
+                
+            )                          ;
             return (
                 <table>
                     <tr>
-                        <td>Category:
-                        {props.category}
-                        </td>
-                        < td >Price:
-                        {props.price}
-                        </td>
-                        < td >Name:
-                        {props.name}
-                        </td>
+                        <th>category</th>
+                        <th>price</th>
+                        <th>name</th>
                     </tr>
+                 {listProducts}
                 </table>
                     );
 
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-        
-        
-}
+ }
 
-
+            ProductTable.propTypes = {
+        
+                                     }
 
 export default ProductTable;

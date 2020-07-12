@@ -1,28 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ProductTable from './component/ProductTable';
 
-
+const products = [
+  {category:'Electronics',
+  price:'100',
+  name:'Phone'}
+  ,
+  {category:'Clothes',
+  price:'200',
+  name:'Dress'}
+]
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-      const products = [
-      {
-          category: 'Electronics',
-          price: '100',
-          name:'Phone'
-      },
-
-      {
-           category: "Clothes",
-           price: '200',
-           name:'Dress'
-      }
-  ]
+    <ProductTable produit={products} />
   </React.StrictMode>,
   document.getElementById('root')
 );
